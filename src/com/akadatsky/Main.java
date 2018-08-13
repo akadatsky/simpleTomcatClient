@@ -20,7 +20,7 @@ public class Main {
             String response = sendPostRequest(json);
             Message receivedMessage = gson.fromJson(response, Message.class);
             System.out.println("Message from server: " + receivedMessage.getText());
-        } catch (JsonSyntaxException e) {
+        } catch (Exception e) {
             System.out.println("Can't parse response from server");
         }
     }
