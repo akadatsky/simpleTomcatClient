@@ -18,10 +18,10 @@ public class Main {
 
         try {
             String response = sendPostRequest(json);
-            Message reseivedMessage = gson.fromJson(response, Message.class);
-            System.out.println("Sessage from server: " + reseivedMessage.getText());
+            Message receivedMessage = gson.fromJson(response, Message.class);
+            System.out.println("Message from server: " + receivedMessage.getText());
         } catch (JsonSyntaxException e) {
-            System.out.println("Can't parse responce from server");
+            System.out.println("Can't parse response from server");
         }
     }
 
